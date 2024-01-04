@@ -13,13 +13,25 @@
 // Щоб перевірити правильність виконання введіть команду: npx jest test3.jest.js
 
 
-
-
-
-
 function applyStyles() {
-// Ваш код ...
+    const mainElement = document.createElement('main');
+    mainElement.className = 'mainClass check item';
+
+    const divElement = document.createElement('div');
+    divElement.id = 'myDiv';
+
+    const pElement = document.createElement('p');
+    pElement.textContent = 'First paragraph';
+
+    divElement.appendChild(pElement);
+
+    mainElement.appendChild(divElement);
+
+    const existingElement = document.querySelector('.create_elements');
+    
+    existingElement.appendChild(mainElement);
 }
+applyStyles();
 
 
 
